@@ -25,6 +25,7 @@ export function NoteBox({ note, saveNote, deleteNote }: NoteBoxProps) {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const cancelRef = useRef();
     const [editing, setEditing] = useState<boolean>(false);
+    const [value, setValue] = useState<string>(note?.body);
 
     if (!note) {
         return (
@@ -33,7 +34,6 @@ export function NoteBox({ note, saveNote, deleteNote }: NoteBoxProps) {
             </Flex>
         );
     }
-    const [value, setValue] = useState<string>(note?.body);
 
     const handleSave = async () => {
         saveNote(note.id, value);

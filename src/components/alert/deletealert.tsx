@@ -16,7 +16,7 @@ export function DeleteAlert({ isOpen, onClose, deleteNote, cancelRef }: DeleteAl
                         Delete Note
                     </AlertDialogHeader>
 
-                    <AlertDialogBody>Are you sure you want to delete this customer? You can't undo this action afterwards.</AlertDialogBody>
+                    <AlertDialogBody>Are you sure you want to delete this customer? You can&apos;t undo this action afterwards.</AlertDialogBody>
 
                     <AlertDialogFooter>
                         <Button ref={cancelRef} onClick={onClose}>
